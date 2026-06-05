@@ -29,6 +29,11 @@ const row = `
             </select>
         </td>
         <td class="amount">0.00</td>
+<td>
+    <button type="button" onclick="deleteRow(this)">
+        Delete
+    </button>
+</td> 
     </tr>
     `;
 
