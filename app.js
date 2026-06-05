@@ -13,8 +13,6 @@ if(addBtn){
 }); 
 function addItemRow() {
 
-alert("Add Item Clicked");
-
 const row = ` 
     <tr>
         <td><input type="text" class="desc"></td>
