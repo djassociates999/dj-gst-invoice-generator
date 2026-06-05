@@ -1,12 +1,16 @@
-// Add first row automatically
 document.addEventListener("DOMContentLoaded", function () {
-    addItemRow();
-    loadProfile();
-});
 
-// Add Item Row
-document.getElementById("addItemBtn").addEventListener("click", addItemRow);
+addItemRow();
 
+loadProfile();
+
+const addBtn = document.getElementById("addItemBtn");
+
+if(addBtn){
+    addBtn.addEventListener("click", addItemRow);
+}
+
+}); 
 function addItemRow() {
 
     const row = `
