@@ -185,9 +185,9 @@ document.getElementById("transactionType")
     .addEventListener("change", calculateTotals);
 function deleteRow(button) {
 
-    const row = button.closest("tr");
+    let row = button.parentNode.parentNode;
 
-    row.remove();
+    row.parentNode.removeChild(row);
 
     calculateTotals();
 } 
