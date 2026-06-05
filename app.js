@@ -13,7 +13,9 @@ if(addBtn){
 }); 
 function addItemRow() {
 
-    const row = `
+alert("Add Item Clicked");
+
+const row = ` 
     <tr>
         <td><input type="text" class="desc"></td>
         <td><input type="text" class="hsn"></td>
