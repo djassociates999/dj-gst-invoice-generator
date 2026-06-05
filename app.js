@@ -183,7 +183,7 @@ function numberToWords(num) {
 // Recalculate when state type changes
 document.getElementById("transactionType")
     .addEventListener("change", calculateTotals);
-unction deleteRow(button) {
+function deleteRow(button) {
 
     const row = button.closest("tr");
 
