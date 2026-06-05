@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ GST Invoice Generator</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>DJ GST Invoice Generator</h1>
+        <p>Create Professional GST Invoices Instantly</p>
+    </header>
+
+    <!-- Seller Details -->
+
+    <section class="card">
+        <h2>Seller Details</h2>
+
+        <input type="text" id="sellerName" placeholder="Business Name">
+        <input type="text" id="sellerGSTIN" placeholder="GSTIN">
+        <textarea id="sellerAddress" placeholder="Business Address"></textarea>
+        <input type="text" id="sellerMobile" placeholder="Mobile Number">
+        <input type="email" id="sellerEmail" placeholder="Email Address">
+    </section>
+
+    <!-- Buyer Details -->
+
+    <section class="card">
+        <h2>Buyer Details</h2>
+
+        <input type="text" id="buyerName" placeholder="Customer Name">
+        <input type="text" id="buyerGSTIN" placeholder="Customer GSTIN">
+        <textarea id="buyerAddress" placeholder="Customer Address"></textarea>
+    </section>
+
+    <!-- Invoice Details -->
+
+    <section class="card">
+        <h2>Invoice Details</h2>
+
+        <input type="text" id="invoiceNo" placeholder="Invoice Number">
+
+        <label>Invoice Date</label>
+        <input type="date" id="invoiceDate">
+
+        <label>Due Date</label>
+        <input type="date" id="dueDate">
+
+        <label>Place of Supply</label>
+        <input type="text" id="placeOfSupply">
+
+        <label>Transaction Type</label>
+        <select id="transactionType">
+            <option value="intra">Intra-State (CGST + SGST)</option>
+            <option value="inter">Inter-State (IGST)</option>
+        </select>
+    </section>
+
+    <!-- Invoice Items -->
+
+    <section class="card">
+        <h2>Invoice Items</h2>
+
+        <table id="itemsTable">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>HSN/SAC</th>
+                    <th>Qty</th>
+                    <th>Rate</th>
+                    <th>GST %</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+
+            <tbody id="itemBody">
+
+            </tbody>
+        </table>
+
+        <button id="addItemBtn">
+            Add Item
+        </button>
+    </section>
+
+    <!-- GST Summary -->
+
+    <section class="card">
+        <h2>GST Summary</h2>
+
+        <div>Total Taxable Value: ₹ <span id="taxableValue">0.00</span></div>
+
+        <div>CGST: ₹ <span id="cgstTotal">0.00</span></div>
+
+        <div>SGST: ₹ <span id="sgstTotal">0.00</span></div>
+
+        <div>IGST: ₹ <span id="igstTotal">0.00</span></div>
+
+        <div class="grand-total">
+            Grand Total: ₹ <span id="grandTotal">0.00</span>
+        </div>
+
+        <p>
+            Amount in Words:
+            <span id="amountWords"></span>
+        </p>
+    </section>
+
+    <!-- Bank Details -->
+
+    <section class="card">
+        <h2>Bank Details</h2>
+
+        <input type="text" id="bankName" placeholder="Bank Name">
+
+        <input type="text" id="accountNo" placeholder="Account Number">
+
+        <input type="text" id="ifsc" placeholder="IFSC Code">
+
+        <input type="text" id="upi" placeholder="UPI ID">
+    </section>
+
+    <!-- Actions -->
+
+    <
